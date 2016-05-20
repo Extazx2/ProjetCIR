@@ -1,0 +1,51 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500);
+h1,h2,h3,h4{
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+}
+h1{
+	vertical-align: center;
+	font-size: 5em;
+}
+h2{
+	font-size: 4em;
+}
+h3{
+	font-size: 3em;
+}
+h4{
+	font-size: 2em;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+	background-image: url("img/fond.png");
+}
+button{
+	font-family: 'Ubuntu', sans-serif;
+	position: fixed;
+	bottom: 0px;
+	background-color: #dd0613;
+	width: 50%;
+	height: 10%;
+	border-color: #000;
+	color: #fff;
+	font-size: 2em;
+}
+button:hover{
+	background-color: #B9121B;
+}
+.ambassadeur{
+	left: 0px;
+}
+.visiteur{
+	right: 0px;
+}
+.accueil h1{
+	margin-top: 40%;
+	font-size: 10em;
+}
+.accueil h3{
+	margin-top: 20%;
+	font-size: 4em;
+}
