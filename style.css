@@ -21,6 +21,11 @@ body{
 	padding: 0px;
 	background-image: url("img/fond.png");
 }
+img{
+	width: auto;
+	margin : 100px;
+	margin-bottom: 800px;
+}
 button{
 	font-family: 'Ubuntu', sans-serif;
 	position: fixed;
