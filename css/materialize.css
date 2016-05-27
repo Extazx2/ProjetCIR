@@ -2261,6 +2261,7 @@ html {
  */
 body {
   margin: 0;
+  background-image: url("../img/fond.png");
 }
 
 /* HTML5 display definitions
@@ -2411,6 +2412,7 @@ sub {
  */
 img {
   border: 0;
+  width: 100%;
 }
 
 /**
