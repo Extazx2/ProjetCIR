@@ -2,7 +2,8 @@
 <html lang="fr">
 	<?php 
 		require 'model/Bdd.php';
-		require "model/Etage.php";
+		require 'model/Etage.php';
+		require 'model/Poi.php';
 		$db = new Bdd('visitisen');
 		session_start();
 	?>
@@ -26,6 +27,7 @@
 	      <ul class="right hide-on-med-and-down">
 	        <li><a href="index.php">Accueil</a></li>
 	        <li><a href="index.php?etage=1">Carte</a></li>
+	        <li><a href="index.php?faq=1">FaQ</a></li>
 	      </ul>
 	      <ul id="nav-mobile" class="side-nav">
 	        <li><a href="index.php">Accueil</a></li>

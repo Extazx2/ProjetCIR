@@ -14,9 +14,9 @@ class Etage{
 				$this->img = $obj->img;
 				$this->libelle = $obj->libelle;
 			}
-			$res = $db->query("SELECT idQr, nom, actif, salle, posx, posy FROM qr WHERE poi = 1 AND idEtage = ".$id);
+			$res = $db->query("SELECT idQr, nom, type, actif, salle, posx, posy FROM qr WHERE afficher = 1 AND idEtage = ".$id);
 			foreach ($res as $obj) {
-				$poi[] = new Poi($obj);
+				$this->poi[] = new Poi($obj);
 			}
 		}
 	}
@@ -26,9 +26,27 @@ class Etage{
 	}
 
 	public function affiche(){
-		echo '<img src="img/'.$this->img.'">';
+		$size = getimagesize('img/'.$this->img);
+		echo '<canvas id="myCanvas" width="'.$size['0'].'" height="'.$size['1'].'" >
+    </canvas>
+    <script >
+
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+		var imageFond = new Image();
+		var imageBalise = new Image();
+
+		imageFond.onload = function() {
+        	context.drawImage(imageFond, 0, 0);
+		};
+		imageFond.src = "img/etage0.png";';
+		foreach ($this->poi as $po) {
+			echo 'alert("pin");';
+			$po->affiche();
+		}
+
+		echo '</script>';
 	}
 }
-	
 
 ?>
