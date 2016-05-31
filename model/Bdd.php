@@ -24,7 +24,8 @@ class Bdd{
 	}
 	public function query($requete){
 		$this->pdo = $this->getPDO();
-		$res = $this->getPDO()->query($requete);
+		$this->pdo->prepare($requete);
+		$res = $this->pdo->query($requete);
 		$datas = $res->fetchAll(PDO::FETCH_OBJ);
 		return $datas;
 	}

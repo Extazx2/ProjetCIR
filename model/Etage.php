@@ -29,23 +29,42 @@ class Etage{
 		$size = getimagesize('img/'.$this->img);
 		echo '<canvas id="myCanvas" width="'.$size['0'].'" height="'.$size['1'].'" >
     </canvas>
-    <script >
+    <script>
+    	window.onload = function() {
+			$("canvas")
+			.addLayer({
+				name: "fond",
+				type: "rectangle",
+				fromCenter: false,
+				index: 0,
+				x: 0,
+				y: 0,
+				width: '.$size['0'].',
+				height: '.$size['1'].'
+			})
+			.drawImage({
+				name: "fond",
+				source:"img/etage0.png",
+				fromCenter: false,
+				x: 0, y: 0
+			})
+			.addLayer({
+				name: "pin",
+				type: "rectangle",
+				fromCenter: false,
+				index: 1,
+				x: 0,
+				y: 0,
+				width: '.$size['0'].',
+				height: '.$size['1'].'
+			})
+';
 
-		var canvas = document.getElementById("myCanvas");
-		var context = canvas.getContext("2d");
-		var imageFond = new Image();
-		var imageBalise = new Image();
-
-		imageFond.onload = function() {
-        	context.drawImage(imageFond, 0, 0);
-		};
-		imageFond.src = "img/etage0.png";';
-		foreach ($this->poi as $po) {
-			echo 'alert("pin");';
-			$po->affiche();
+		foreach ($this->poi as $poi) {
+			$poi->affiche();
 		}
 
-		echo '</script>';
+		echo '};</script>';
 	}
 }
 

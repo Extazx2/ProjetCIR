@@ -17,6 +17,9 @@
 	  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
+	  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	  <script src="js/jcanvas.min.js"></script>
+
 		<link rel="shortcut icon" type="image/x-icon" href="img/isen.ico"/>
 	</head>
 
@@ -50,9 +53,7 @@
 				require("view/welcome.php");
 		?>
 
-	  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script src="https://use.fontawesome.com/234a7fefe5.js"></script>
-	  <script src="js/materialize.js"></script>
+	  <script src="js/materialize.min.js"></script>
 	  <script src="js/init.js"></script>
 	</body>
 </html>

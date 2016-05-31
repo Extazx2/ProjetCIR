@@ -21,16 +21,14 @@ class Poi{
 
 	public function affiche(){
 		echo '
-		imageBalise.onload = function() {
-        	context.drawImage(imageBalise, '.$this->posx.', '.$this->posy.', 141, 192);
-		};
-
-		imageBalise.src = "img/pin.png";
-		';
-
-
+		.drawImage({
+			name: "pin",
+			source:"img/pin.png",
+			x: '.$this->posx.', y: '.$this->posy.',
+			width: 180,
+			height: 250
+			})';
 	}
-
 
 }
 
