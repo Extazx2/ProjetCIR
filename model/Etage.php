@@ -28,35 +28,28 @@ class Etage{
 	public function affiche(){
 		$size = getimagesize('img/'.$this->img);
 		echo '<canvas id="myCanvas" width="'.$size['0'].'" height="'.$size['1'].'" >
-    </canvas>
-    <script>
+	</canvas>
+	<script>
+
+		var canvas = document.getElementById(\'myCanvas\');
+		var context = canvas.getContext(\'2d\');
+
+		function getMousePos(canvas, evt) {
+			var rect = canvas.getBoundingClientRect();
+			alert("x: "+evt.clientX+" y: "+evt.clientY);
+			return {
+				x: evt.clientX - rect.left,
+				y: evt.clientY - rect.top
+			};
+		}
+
+
     	window.onload = function() {
 			$("canvas")
-			.addLayer({
-				name: "fond",
-				type: "rectangle",
-				fromCenter: false,
-				index: 0,
-				x: 0,
-				y: 0,
-				width: '.$size['0'].',
-				height: '.$size['1'].'
-			})
 			.drawImage({
-				name: "fond",
-				source:"img/etage0.png",
+				source:"img/'.$this->img.'",
 				fromCenter: false,
-				x: 0, y: 0
-			})
-			.addLayer({
-				name: "pin",
-				type: "rectangle",
-				fromCenter: false,
-				index: 1,
-				x: 0,
-				y: 0,
-				width: '.$size['0'].',
-				height: '.$size['1'].'
+				x: 0, y: 0,
 			})
 ';
 

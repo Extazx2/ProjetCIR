@@ -25,8 +25,8 @@ class Poi{
 			name: "pin",
 			source:"img/pin.png",
 			x: '.$this->posx.', y: '.$this->posy.',
-			width: 180,
-			height: 250
+			width: 150,
+			height: 200
 			})';
 	}
 
