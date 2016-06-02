@@ -1,5 +1,5 @@
 <?php
-	echo '<h2 class="header center">Foire au Question</h2>
+	echo '<h2 class="header center">Foire aux Questions</h2>
 	';
 	$res = $db->query("SELECT question, reponse FROM faq ORDER BY question");
 	foreach ($res as $re) {
