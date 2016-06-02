@@ -9,5 +9,13 @@ echo '
       </div>
       <br><br>
     </div>
-  </div>';
+  </div>
+  <footer>
+		<div class="container">
+			<div class="row">
+				<a class="col s5 waves-effect waves-light btn red" href="index.php?etage=1">Carte</a>
+				<a class="col offset-s2 s5 waves-effect waves-light btn red" href="index.php?faq=1">FaQ</a>
+			</div>
+		</div>
+	</footer>';
 ?>

@@ -30,6 +30,13 @@ class Poi{
 			})';
 	}
 
+	public function afficheList(){
+		echo '
+			<li><a href="#" class="red-text">'.$this->nom.'</a></li>
+          	<li class="divider"></li>';
+
+	}
+
 }
 
 ?>

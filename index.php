@@ -31,11 +31,13 @@
 	        <li><a href="index.php">Accueil</a></li>
 	        <li><a href="index.php?etage=1">Carte</a></li>
 	        <li><a href="index.php?faq=1">FaQ</a></li>
+	        <li><a href="index.php?list=1">Liste des POI</a></li>
 	      </ul>
 	      <ul id="nav-mobile" class="side-nav">
 	        <li><a href="index.php">Accueil</a></li>
 	        <li><a href="index.php?etage=1">Carte</a></li>
 	        <li><a href="index.php?faq=1">FaQ</a></li>
+	        <li><a href="index.php?list=1">POI</a></li>
 	      </ul>
 	      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
 	    </div>
@@ -49,10 +51,15 @@
 			elseif (isset($_GET['faq'])){
 				require("view/faq.php");
 			}
+			elseif (isset($_GET['list'])){
+				$list = new Etage($_GET['list'], $db);
+				require("view/list.php");
+			}
 			else
 				require("view/welcome.php");
 		?>
 
+		
 	  <script src="js/materialize.min.js"></script>
 	  <script src="js/init.js"></script>
 	</body>

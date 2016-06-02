@@ -1,7 +1,14 @@
 body{
 	background-image: url("../img/fond.png");
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 canvas{
 	width: 100%;
 	height: auto;
+}
+footer{
+    flex: 1 0 auto;
+    margin-bottom: 20px;
 }

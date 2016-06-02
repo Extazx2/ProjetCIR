@@ -6,9 +6,9 @@
     </a>
     <ul>
     ';
-    $res = $db->query("SELECT idEtage, libelle FROM etage ORDER BY idEtage DESC");
+    $res = $db->query("SELECT idEtage, libelle, min FROM etage ORDER BY idEtage DESC");
     foreach ($res as $re) {
-    	echo '<li><a class="btn-floating red" href="index.php?etage='.$re->idEtage.'">'.$re->libelle.'</a></li>
+    	echo '<li><a class="btn-floating red" href="index.php?etage='.$re->idEtage.'">'.$re->min.'</a></li>
     	';
     }
     echo '
