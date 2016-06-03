@@ -17,8 +17,8 @@
 	  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-	  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	  <script src="js/jcanvas.min.js"></script>
+	  <script src="js/jquery.js"></script>
+	  <script src="js/leaflet.js"></script>
 	  <script src="bower_components/qcode-decoder/build/qcode-decoder.min.js"></script>
 
 		<link rel="shortcut icon" type="image/x-icon" href="img/isen.ico"/>
@@ -53,8 +53,17 @@
 				require("view/faq.php");
 			}
 			elseif (isset($_GET['list'])){
-				$list = new Etage($_GET['list'], $db);
+				$res = $db->query("SELECT idEtage FROM etage");
+				foreach ($res as $re) {
+					$list[] = new Etage($re->idEtage, $db);
+				}
+
 				require("view/list.php");
+			}
+
+			elseif (isset($_GET['poi'])){
+				$poi = new Poi($_GET['poi'], $db);
+				require("view/poi.php");
 			}
 			elseif (isset($_GET['depart'])){
 				require("view/guide.php");
