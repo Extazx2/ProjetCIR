@@ -8,14 +8,12 @@
 
   if(isset($_GET['depart'])){
     echo 'Veuillez prendre en photo un qr code à proximité !
-    <script>var video = document.getElementById(\'camera\');
+    <video autoplay="" id="video"></video>
+    <script>var video = document.getElementById(\'video\');
 
           QCodeDecoder().decodeFromCamera(video, function(er,res){
     console.log(res);
-    });</script>';
+    });</script>
+';
   }
 ?>
-<script src="bower_components/qcode-decoder/build/qcode-decoder.min.js"></script>
-elseif (isset($_GET['depart'])){
-				require("view/guide.php");
-			}
