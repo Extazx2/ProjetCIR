@@ -35,29 +35,6 @@ class Etage{
 
 	public function affiche(){
 		$size = getimagesize('img/'.$this->img);
-/*		echo '
-	<canvas id="myCanvas" width="'.$size['0'].'" height="'.$size['1'].'" >
-	</canvas>
-	<script>
-    	window.onload = function() {
-			$("canvas")
-			';
-		
-		foreach ($this->poi as $poi) {
-			$poi->affiche();
-		}
-
-		echo '
-			.drawImage({
-				name: "fond",
-				source:"img/'.$this->img.'",
-				layer: true,
-				fromCenter: false,
-				x: 0, y: 0,
-				index:0
-			})
-	};</script>';*/
-
 	echo '<div id="image-map"></div>
 
 	<script>
