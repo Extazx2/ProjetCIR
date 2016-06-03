@@ -16,6 +16,8 @@
 	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	  <link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+
 
 	  <script src="js/jquery.js"></script>
 	  <script src="js/leaflet.js"></script>
