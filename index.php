@@ -30,7 +30,7 @@
 	<body>
 
 	  <nav class="red lighten-1" role="navigation">
-	    <div class="nav-wrapper container"><a id="logo-container" href="index.php" class="brand-logo">Visitisen</a>
+	    <div class="nav-wrapper container"><a id="logo-container" href="index.php" class="brand-logo">VISITISEN</a>
 	      <ul class="right hide-on-med-and-down">
 	        <li><a href="index.php">Accueil</a></li>
 	        <li><a href="index.php?etage=1">Carte</a></li>
@@ -60,10 +60,8 @@
 				foreach ($res as $re) {
 					$list[] = new Etage($re->idEtage, $db);
 				}
-
 				require("view/list.php");
 			}
-
 			elseif (isset($_GET['poi'])){
 				$poi = new Poi($_GET['poi'], $db);
 				require("view/poi.php");
