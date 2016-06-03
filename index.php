@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<?php 
+		require 'conf.php';
 		require 'model/Bdd.php';
 		require 'model/Etage.php';
 		require 'model/Poi.php';
-		$db = new Bdd('visitisen');
+		$db = new Bdd($db_name, $db_user, $db_pass, $db_host);
 		session_start();
 	?>
 	<head>
@@ -16,9 +17,10 @@
 	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 
-	  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	  <script src="js/jcanvas.min.js"></script>
+	  <script src="js/jquery.js"></script>
+	  <script src="js/leaflet.js"></script>
 
 		<link rel="shortcut icon" type="image/x-icon" href="img/isen.ico"/>
 	</head>
@@ -48,15 +50,28 @@
 				$etage = new Etage($_GET['etage'], $db);
 				require("view/etage.php");
 			}
+
 			elseif (isset($_GET['faq'])){
 				require("view/faq.php");
 			}
+
 			elseif (isset($_GET['list'])){
-				$list = new Etage($_GET['list'], $db);
+				$res = $db->query("SELECT idEtage FROM etage");
+				foreach ($res as $re) {
+					$list[] = new Etage($re->idEtage, $db);
+				}
+
 				require("view/list.php");
 			}
+
+			elseif (isset($_GET['poi'])){
+				$poi = new Poi($_GET['poi'], $db);
+				require("view/poi.php");
+			}
+
 			else
 				require("view/welcome.php");
+
 		?>
 
 		
