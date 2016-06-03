@@ -84,3 +84,14 @@
 	  <script src="js/init.js"></script>
 	</body>
 </html>
+
+<!--
+
+-finir java (+ link) => marco
+-placer les points => denis
+-colorer les points + description => denis
+-qrcode à rediriger => marco
+
+
+
+-->
