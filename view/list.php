@@ -1,3 +1,5 @@
 <?php
-  $list->afficheList();
+	foreach ($list as $etage) {
+		$etage->afficheList();
+	}
 ?>

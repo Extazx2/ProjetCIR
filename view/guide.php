@@ -15,3 +15,7 @@
     });</script>';
   }
 ?>
+<script src="bower_components/qcode-decoder/build/qcode-decoder.min.js"></script>
+elseif (isset($_GET['depart'])){
+				require("view/guide.php");
+			}

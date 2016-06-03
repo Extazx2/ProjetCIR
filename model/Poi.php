@@ -8,26 +8,26 @@ class Poi{
 	private $salle;
 	private $posx;
 	private $posy;
+	private $db;
 
-	public function __construct( $obj){
-		$this->id = $obj->idQr;
-		$this->nom = $obj->nom;
-		$this->type = $obj->type;
-		$this->actif = $obj->actif;
-		$this->salle = $obj->salle;
-		$this->posx = $obj->posx;
-		$this->posy = $obj->posy;
+	public function __construct( $id, $db){
+		$res = $db->query("SELECT nom, type, actif, salle, posx, posy FROM qr WHERE idQr = ".$id);
+		$this->id = $id;
+		$this->db = $db;
+		foreach ($res as $re) {
+			$this->nom = $re->nom;
+			$this->type = $re->type;
+			$this->actif = $re->actif;
+			$this->salle = $re->salle;
+			$this->posx = $re->posx;
+			$this->posy = $re->posy;
+		}
 	}
+
 
 	public function affiche(){
 		echo '
-		.drawImage({
-			name: "pin",
-			source:"img/pin.png",
-			x: '.$this->posx.', y: '.$this->posy.',
-			width: 180,
-			height: 250
-			})';
+			L.marker([-100,100], {icon: greenIcon}).addTo(map).bindPopup("I am a green leaf.");';
 	}
 
 	public function afficheList(){
@@ -35,6 +35,15 @@ class Poi{
 			<li><a href="index.php?list.php&depart='.$this->id.'" class="red-text">'.$this->nom.'</a></li>
           	<li class="divider"></li>';
 
+	}
+	public function getNom(){
+		return $this->nom;
+	}
+	public function getLibelle(){
+		$res = $db->query("SELECT libelle FROM qr WHERE idQr = ".$this ->id);
+		foreach ($res as $re) {
+			return $re->libelle;
+		}
 	}
 
 }
