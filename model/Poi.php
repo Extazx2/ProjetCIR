@@ -32,7 +32,7 @@ class Poi{
 
 	public function afficheList(){
 		echo '
-			<li><a href="index.php?list.php&depart='.$this->id.'" class="red-text">'.$this->nom.'</a></li>
+			<li><a href="index.php?list.php&arrivee='.$this->id.'" class="red-text">'.$this->nom.'</a></li>
           	<li class="divider"></li>';
 
 	}

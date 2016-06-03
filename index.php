@@ -65,8 +65,12 @@
 				$poi = new Poi($_GET['poi'], $db);
 				require("view/poi.php");
 			}
-			elseif (isset($_GET['depart'])){
-				require("view/guide.php");
+			elseif (isset($_GET['arrivee'])){
+				require("view/qr.php");
+			}
+			elseif (isset($_GET['depart']) && isset($_GET['arrivee'])){
+				$guide = new Guide($_GET['depart'], $_GET['arrivee']);
+				require("view/guide.php")
 			}
 			else
 				require("view/welcome.php");
