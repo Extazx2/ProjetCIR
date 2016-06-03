@@ -73,7 +73,7 @@
 			}
 			elseif (isset($_GET['depart']) && isset($_GET['arrivee'])){
 				$guide = new Guide($_GET['depart'], $_GET['arrivee']);
-				require("view/guide.php")
+				require("view/guide.php");
 			}
 			else
 				require("view/welcome.php");
