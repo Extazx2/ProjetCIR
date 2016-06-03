@@ -19,6 +19,7 @@
 
 	  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	  <script src="js/jcanvas.min.js"></script>
+	  <script src="bower_components/qcode-decoder/build/qcode-decoder.min.js"></script>
 
 		<link rel="shortcut icon" type="image/x-icon" href="img/isen.ico"/>
 	</head>
@@ -54,6 +55,9 @@
 			elseif (isset($_GET['list'])){
 				$list = new Etage($_GET['list'], $db);
 				require("view/list.php");
+			}
+			elseif (isset($_GET['depart'])){
+				require("view/guide.php");
 			}
 			else
 				require("view/welcome.php");
