@@ -27,7 +27,7 @@ class Poi{
 
 	public function affiche(){
 		echo '
-			L.marker([-100,100], {icon: greenIcon}).addTo(map).bindPopup("I am a green leaf.");';
+			L.marker([-100,100], {icon: greenIcon}).addTo(map).bindPopup("'.$this->nom.'");';
 	}
 
 	public function afficheList(){
