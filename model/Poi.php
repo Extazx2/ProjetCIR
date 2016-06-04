@@ -27,7 +27,7 @@ class Poi{
 
 	public function affiche(){
 		echo '
-			L.marker([-100,100], {icon: greenIcon}).addTo(map).bindPopup("'.$this->nom.'");';
+			L.marker([-'.$this->posy.','.$this->posx.'], {icon: '.$this->type.'}).addTo(map).bindPopup("'.$this->nom.'");';
 	}
 
 	public function afficheList(){
@@ -45,7 +45,6 @@ class Poi{
 			return $re->libelle;
 		}
 	}
-
 }
 
 ?>
