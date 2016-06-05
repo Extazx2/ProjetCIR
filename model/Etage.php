@@ -56,14 +56,16 @@ class Etage{
 
 	public function afficheList(){
 		echo '<h2 class="header center">'.$this->libelle.'</h2>
-				<a class="dropdown-button red btn" href="#" data-activates="dropdown1">Points d\'intêret</a>
+				<a class="dropdown-button red btn" href="#" data-activates="dropdown'.$this->idEtage.'">Points d\'intêret</a>
 
-					<ul id="dropdown1" class="dropdown-content">';
+					<ul id="dropdown'.$this->idEtage.'" class="dropdown-content">';
 
 		foreach ($this->poi as $po) {
 			$po->afficheList();
 		}
-		echo '</ul>';
+		echo '
+		</ul>
+		';
 	}
 }
 
