@@ -6,6 +6,8 @@ var map = L.map("image-map", {
     crs: L.CRS.Simple
 });
 
+// source : http://kempe.net/blog/2014/06/14/leaflet-pan-zoom-image.html
+
 // calculate the edges of the image, in coordinate space
 var southWest = map.unproject([0, h], map.getMaxZoom()-1);
 var northEast = map.unproject([w, 0], map.getMaxZoom()-1);

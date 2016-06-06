@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<?php 
+		require 'conf.php';
 		require 'model/Bdd.php';
 		require 'model/Etage.php';
 		require 'model/Poi.php';
-		$db = new Bdd('visitisen');
+		$db = new Bdd($db_name, $db_user, $db_pass, $db_host);
 		session_start();
 	?>
 	<head>
