@@ -7,7 +7,6 @@
 			</div></div>
     <video autoplay="" id="video"></video>
     <script>var video = document.getElementById(\'video\');
-
     QCodeDecoder().decodeFromCamera(video, function(er,res){
       console.log(res);
     });</script>
