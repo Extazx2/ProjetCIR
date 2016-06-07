@@ -34,8 +34,28 @@ var poi = L.icon({
 	popupAnchor:  [0, -77] // point from which the popup should open relative to the iconAnchor
 });
 
+var disable_poi = L.icon({
+	iconUrl: "img/disable_pin.png",
+	shadowUrl: "img/shadow.png",
+	iconSize:     [56, 77], // size of the icon
+	shadowSize:   [0, 0], // size of the shadow
+	iconAnchor:   [28, 77], // point of the icon which will correspond to markers location
+	shadowAnchor: [28, 77],  // the same for the shadow
+	popupAnchor:  [0, -77] // point from which the popup should open relative to the iconAnchor
+});
+
 var esc = L.icon({
 	iconUrl: "img/esc.png",
+	shadowUrl: "img/shadow.png",
+	iconSize:     [50, 50], // size of the icon
+	shadowSize:   [0, 0], // size of the shadow
+	iconAnchor:   [25, 25], // point of the icon which will correspond to markers location
+	shadowAnchor: [25, 25],  // the same for the shadow
+	popupAnchor:  [0, -25] // point from which the popup should open relative to the iconAnchor
+});
+
+var disable_esc = L.icon({
+	iconUrl: "img/disable_esc.png",
 	shadowUrl: "img/shadow.png",
 	iconSize:     [50, 50], // size of the icon
 	shadowSize:   [0, 0], // size of the shadow
@@ -54,4 +74,12 @@ var wc = L.icon({
 	popupAnchor:  [0, -25] // point from which the popup should open relative to the iconAnchor
 });
 
-
+var disable_wc = L.icon({
+	iconUrl: "img/disable_wc.png",
+	shadowUrl: "img/shadow.png",
+	iconSize:     [50, 50], // size of the icon
+	shadowSize:   [0, 0], // size of the shadow
+	iconAnchor:   [25, 25], // point of the icon which will correspond to markers location
+	shadowAnchor: [25, 25],  // the same for the shadow
+	popupAnchor:  [0, -25] // point from which the popup should open relative to the iconAnchor
+});
