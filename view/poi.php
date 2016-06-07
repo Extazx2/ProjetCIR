@@ -15,7 +15,7 @@
     <div class="container">
       <div class="row">
         <a class="col s6 waves-effect waves-light btn red" href="index.php?etage='.$poi->getEtage().'">Retour à la carte</a>
-        <a class="col s6 waves-effect waves-light btn red" href="index.php?arrivee='.$poi->getId().'">Me guider jusqu\'à ce point</a>
+        <a class="col s6 waves-effect waves-light btn red" href="index.php?arrivee='.$poi->getId().'">Me guider</a>
       </div>
     </div>
   </footer>';

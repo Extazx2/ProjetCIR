@@ -23,7 +23,8 @@
 
 	  <script src="js/jquery.js"></script>
 	  <script src="js/leaflet.js"></script>
-	  <script src="bower_components/qcode-decoder/build/qcode-decoder.min.js"></script>
+	  <script src="html5decode/lib/html5-qrcode.min.js"></script>
+	  <script src="html5decode/lib/jsqrcode-combined.min.js"></script>
 
 		<link rel="shortcut icon" type="image/x-icon" href="img/isen.ico"/>
 	</head>
@@ -78,12 +79,6 @@
 </html>
 
 <!--
-
--finir java (+ link) => marco
--placer les points => denis
--colorer les points + description => denis
+-description points
 -qrcode à rediriger => marco
-
-
-
 -->
