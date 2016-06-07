@@ -1,3 +1,9 @@
+/**
+ * Classe pour le graphe
+ * @author http://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html
+ * @see main.java Edge.java Vertex.java
+ */
+
 import java.util.List;
 
 public class Graph {

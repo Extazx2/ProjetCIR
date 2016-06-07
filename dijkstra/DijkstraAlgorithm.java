@@ -1,3 +1,9 @@
+/**
+ * Algorithme de calcul de dijkstra
+ * @author http://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html
+ * @see main.java
+ */
+
 import java.util.*;
 
 public class DijkstraAlgorithm {

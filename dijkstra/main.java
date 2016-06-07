@@ -1,3 +1,10 @@
+/**
+ * fonction principale du programme java
+ * @author MaTouin - DCrenn
+ * @param args paramètre de la ligne de commande : 6 exigée => noeud source, noeud destination et information de connexion à la bdd
+ *
+ */
+
 import java.util.*;
 
 public class main{
@@ -22,14 +29,14 @@ public class main{
 		
 		//System.out.println("test 6");
 		
-		for (int j=0; j<nodes.size();j++){
-			if(Integer.parseInt(args[0]) == Integer.parseInt(nodes.get(j).getId())){
-				source = nodes.get(j);
+		for (int i=0; i<nodes.size();i++){
+			if(Integer.parseInt(args[0]) == Integer.parseInt(nodes.get(i).getId())){
+				source = nodes.get(i);
 			}
 		}
-		for (int h=0; h<nodes.size();h++){
-			if(Integer.parseInt(args[1]) == Integer.parseInt(nodes.get(h).getId())){
-				dest = nodes.get(h);
+		for (int j=0; j<nodes.size();j++){
+			if(Integer.parseInt(args[1]) == Integer.parseInt(nodes.get(j).getId())){
+				dest = nodes.get(j);
 			}
 		}
 		

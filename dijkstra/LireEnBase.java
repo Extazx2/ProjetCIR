@@ -1,3 +1,10 @@
+/**
+ * classe d'accès à la BDD
+ * @author MaTouin - DCrenn
+ * @param dbname , dbuser , dbpass , dbhost informations de connection à la bdd modifiable dans le fichier ../conf.php
+ * @see main.java
+ */
+
 import java.util.*;
 import java.sql.*;
 

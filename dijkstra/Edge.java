@@ -1,3 +1,9 @@
+/**
+ * Classe pour les chemins
+ * @author http://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html
+ * @see main.java Graph.java Vertex.java
+ */
+
 public class Edge  {
 	  private final String id; 
 	  private final Vertex source;

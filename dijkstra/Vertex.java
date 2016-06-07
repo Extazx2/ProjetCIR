@@ -1,3 +1,9 @@
+/**
+ * Classe pour les noeuds
+ * @author http://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html
+ * @see main.java Graph.java Edge.java
+ */
+
 public class Vertex {
 	final private String id;
 	final private String name;
