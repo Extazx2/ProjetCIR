@@ -47,7 +47,6 @@
 	      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
 	    </div>
 	  </nav>
-
 		<?php
 			if (isset($_GET['etage'])){
 				$etage = new Etage($_GET['etage'], $db);
@@ -70,15 +69,9 @@
 			elseif (isset($_GET['arrivee'])){
 				require("view/qr.php");
 			}
-			elseif (isset($_GET['depart']) && isset($_GET['arrivee'])){
-				$guide = new Guide($_GET['depart'], $_GET['arrivee']);
-				require("view/guide.php");
-			}
 			else
 				require("view/welcome.php");
 		?>
-
-		
 	  <script src="js/materialize.min.js"></script>
 	  <script src="js/init.js"></script>
 	</body>

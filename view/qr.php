@@ -1,6 +1,4 @@
 <?php
-
-  if(isset($_GET['arrivee'])){
     echo '
     <div class="container">
     	<div class="row"></div>
@@ -11,9 +9,9 @@
     <video autoplay="" id="video"></video>
     <script>var video = document.getElementById(\'video\');
 
-          QCodeDecoder().decodeFromCamera(video, function(er,res){
-    console.log(res);
+    QCodeDecoder().decodeFromCamera(video, function(er,res){
+      .load("index.php?etage=1&amp;arrivee='.$_GET['arrivee'].'$amp;depart=" + res)
     });</script>
 ';
-  }
+
 ?>

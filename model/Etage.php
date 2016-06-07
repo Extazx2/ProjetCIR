@@ -67,7 +67,7 @@ class Etage{
 		</ul>
 		';
 	}
-	public function afficheChemin($tab_chemin[]){
+	public function afficheChemin($tab_chemin){
 
 		$size = getimagesize('img/'.$this->img);
 		echo '<div id="image-map"></div>
