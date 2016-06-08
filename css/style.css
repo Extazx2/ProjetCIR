@@ -11,10 +11,6 @@ body{
   border: 1px solid #ccc;
   margin-bottom: 10px;
 }
-#reader {
-	width:100%;
-	height: 250px;
-}
 footer{
     flex: 1 0 auto;
     margin-bottom: 20px;
