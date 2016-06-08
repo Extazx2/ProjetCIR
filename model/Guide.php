@@ -7,6 +7,8 @@ class Guide{
 
 	public function __construct ($depart, $arrivee, $db_name, $db_user, $db_pass, $db_host){ 
 		shell_exec("cd dijkstra");
+		/* maybe useless */
+		shell_exec("javac main.java");
 		exec("java -cp \"mysql-connector-java-5.1.39-bin.jar\":. main ".$depart." ". $arrivee." ".$db_name." ". $db_user." ".$db_pass." ". $db_host , $res);
 	}
 
