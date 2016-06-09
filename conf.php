@@ -6,3 +6,4 @@
 		$db_pass = "isenBrest29";	//mot de passe de l'utilisateur
 		$db_host = "localhost";		//adresse de la base
 ?>
+
